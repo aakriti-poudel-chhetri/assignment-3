@@ -1,0 +1,24 @@
+---
+title: "Task 3: Considerations in High Dimensions"
+author: "Aakriti Poudel"
+date: "May 18"
+format: html
+---
+
+## Introduction
+
+This document explores key challenges that arise when fitting regression models to high dimensional data settings where the number of features $p$ exceeds the number of observations $n$, and reflects on the use of generative AI to clarify concepts from Section 6.4 of *An Introduction to Statistical Learning with Applications in Python*.
+
+## Concept to Clarify
+
+The textbook says that adding noise features, variables that have nothing to do with the outcome, makes test error go up, which makes sense. But it also says that adding a feature that does predict the outcome can still make test error go up. I understood the basic idea, but I could not see why a useful variable would hurt the model and how that connects to the bias variance tradeoff.
+
+## Prompt
+
+> I am a graduate student pursuing the Master of Environmental Data Science degree. For my machine learning course, I am reading **Section 6.4, Considerations in High Dimensions**, from the book *An Introduction to Statistical Learning*. I am trying to understand the curse of dimensionality more accurately.
+> The textbook states, "Even if they are relevant, the variance incurred in fitting their coefficients may outweigh the reduction in bias that they bring". I understand that noise features affect model performance, but I don't understand why adding a relevant feature can still increase test error in high dimensions.
+> Can you explain this in plain, simple language with no jargon and no math? Please use an analogy to make it easier to follow. I also want to understand how this is different from a setting where you have many observations and only a few variables. I am particularly interested in why having too many variables compared to observations makes it hard to get reliable estimates, even when the added variable genuinely helps predict the outcome.
+
+## Generative AI Reflection
+
+I used Claude for this task. My prompt included my background as a graduate student, the exact sentence from the textbook that confused me, and a request for a simple analogy with no math. Claude explained it like this: imagine you are trying to figure out what makes a student do well on an exam, but you only have 5 students. If you look at 3 things about each student, you can spot real patterns. But if you look at 100 things, you start finding patterns that are just coincidence and even a variable that truly matters becomes hard to pin down reliably with so few students. It took three iteration to get a clear answer, and the response matched what the textbook said without introducing anything contradictory.
